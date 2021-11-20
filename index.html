@@ -29,7 +29,6 @@
         window.dataLayer.push({val1: val2});
         }
     }
-    window.dataLayer.push({'aaa': 'new'});
     getQueryString(githubURL);
 
   </script>
@@ -54,19 +53,6 @@
   <p id="demo"></p>
   <a href="https://zyt9749.github.io/index.html?pageCategory=newPage">携带参数my name跳转</a>
   <script>
-    const githubURL = new URL('https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad');
-
-    function getQueryString(newurl) {
-    let queryString = newurl.split('?')[1];
-    let urlParams = new URLSearchParams(queryString);
-    let entries = urlParams.entries();
-    for(const entry of entries) {
-        dataLayer.push(entry[0]: entry[1]);
-        }
-    return null;
-    }
-    getQueryString(githubURL);
-
   </script>
 
 
