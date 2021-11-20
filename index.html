@@ -21,13 +21,11 @@
     const queryString = newUrl.split('?')[1];
     const urlParams = new URLSearchParams(queryString);
     const entries = urlParams.entries();
-    var val1 = 'null';
-    var val2 = 'null';
+    var object = new Object();
     for(const entry of entries) {
-        val1 = entry[0];
-        val2 = entry[1];
-        window.dataLayer.push({val1: val2});
+        object.entry[0] = entry[1];
         }
+    window.dataLayer.push({'query string parameters': object});
     }
     getQueryString(githubURL);
 
