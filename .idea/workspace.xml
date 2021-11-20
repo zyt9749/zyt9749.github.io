@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3386d2-0620-46dd-be23-e7a4db4acb60" name="Default" comment="">
+    <list default="true" id="1f3386d2-0620-46dd-be23-e7a4db4acb60" name="Default" comment="button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -194,7 +194,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif" />
+    <MESSAGE value="button" />
+    <option name="LAST_COMMIT_MESSAGE" value="button" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
