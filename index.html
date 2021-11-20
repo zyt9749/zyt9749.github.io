@@ -41,15 +41,15 @@
     };
     return null;
  }
-    name='https://zyt9749.github.io/index.html?pageCategory=newPage';
-    let test = getQueryString(name);
-    window.alert(test);
-    $("button").click(function(){
-    $.get("http://httpbin.org/get",function(data,status){
-    alert("Data: " + data + "\nStatus: " + status);
-    });
-    });
-    window.dataLayer.push({‘event’: ‘new_subscriber’});
+    name='https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad';
+    const queryString = url.split('?')[1];
+    const urlParams = new URLSearchParams(queryString);
+    const entries = urlParams.entries();
+    for(const entry of entries) {
+        dataLayer.push(entry[0]: entry[1]);
+    }
+
+
   </script>
 
 
