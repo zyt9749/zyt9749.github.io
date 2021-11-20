@@ -7,21 +7,22 @@
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
       <script>
-        dataLayer = [{
-        'pageCategory': 'test-page',
-        'visitorType': 'high-value'
-        }];
-        dataLayer.push('visitorType': 'high-value');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'new_subscriber',
+            'formLocation': 'footer'
+        });
+
       </script>
       <script>
     const githubURL = new URL('https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad');
 
-    function getQueryString(newurl) {
-    let queryString = newurl.split('?')[1];
+    function getQueryString(newUrl) {
+    let queryString = newUrl.split('?')[1];
     let urlParams = new URLSearchParams(queryString);
     let entries = urlParams.entries();
     for(const entry of entries) {
-        dataLayer.push(entry[0]: entry[1]);
+        window.dataLayer.push(entry[0]: entry[1]);
         }
     return null;
     }
