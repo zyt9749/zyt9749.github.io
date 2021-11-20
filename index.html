@@ -33,6 +33,17 @@
   <p id="demo"></p>
   <a href="https://zyt9749.github.io/index.html?pageCategory=newPage">携带参数my name跳转</a>
   <script>
+    function getQueryString(name) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return decodeURIComponent(r[2]);
+    };
+    return null;
+ }
+    name='https://zyt9749.github.io/index.html?pageCategory=newPage';
+    let test = getQueryString(name);
+    window.alert(test);
     $("button").click(function(){
     $.get("http://httpbin.org/get",function(data,status){
     alert("Data: " + data + "\nStatus: " + status);
