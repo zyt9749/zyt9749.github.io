@@ -18,9 +18,9 @@
     const githubURL = new URL('https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad');
 
     function getQueryString(newUrl) {
-    let queryString = newUrl.split('?')[1];
-    let urlParams = new URLSearchParams(queryString);
-    let entries = urlParams.entries();
+    const queryString = newUrl.split('?')[1];
+    const urlParams = new URLSearchParams(queryString);
+    const entries = urlParams.entries();
     for(const entry of entries) {
         window.dataLayer.push({entry[0]: entry[1]});
         }
