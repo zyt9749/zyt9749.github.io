@@ -15,18 +15,22 @@
 
       </script>
       <script>
-    let githubURL = 'https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad';
+    var githubURL = 'https://zyt9749.github.io/index.html?aaa=new&bbb=old&ccc=bad';
 
-    function getQueryString(newUrl) {
-    const queryString = newUrl.split('?')[1];
-    const urlParams = new URLSearchParams(queryString);
-    const entries = urlParams.entries();
-    var object = new Object();
-    for(const entry of entries) {
-        object.entry[0] = entry[1];
+    function parseQueryString(url){
+        var str=url.split("?")[1],
+            items=str.split("&");
+        var arr,name,value;
+        for(var i = 0, l = items.length; i < l; i++){
+            arr=items[i].split("=");
+            name= arr[0];
+            value= arr[1];
+            this[name]=value;
         }
-    window.dataLayer.push({'query string parameters': object});
     }
+    var obj=new parseQueryString(url);
+    window.dataLayer.push({'query string parameters': obj});
+
     getQueryString(githubURL);
 
   </script>
