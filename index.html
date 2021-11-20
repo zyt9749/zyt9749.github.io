@@ -6,6 +6,12 @@
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+      <script>
+        dataLayer = [{
+        'pageCategory': 'test-page',
+        'visitorType': 'high-value'
+        }];
+      </script>
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -21,12 +27,11 @@
           onclick="document.getElementById('demo').innerHTML = Date()">
       Click here to check the date and the time
   </button>
-
+  <a href="#" name="color" onclick="dataLayer.push({'color': 'red',
+     'conversionValue': 50,
+     'event': 'customizeCar'});" >Customize color</a>
   <p id="demo"></p>
-  <form method="get" action="">
-      <input type="text" name="id" />
-      <input type="submit" />
-  </form>
+
 
   <button method="get" action="clicked">Click here</button>
   <!-- Google Tag Manager (noscript) -->
