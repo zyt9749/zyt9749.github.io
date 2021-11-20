@@ -21,8 +21,8 @@
     const queryString = newUrl.split('?')[1];
     const urlParams = new URLSearchParams(queryString);
     const entries = urlParams.entries();
-    let val1 = 'null';
-    let val2 = 'null';
+    var val1 = 'null';
+    var val2 = 'null';
     for(const entry of entries) {
         val1 = entry[0];
         val2 = entry[1];
