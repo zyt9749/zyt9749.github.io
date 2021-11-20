@@ -22,7 +22,7 @@
     let urlParams = new URLSearchParams(queryString);
     let entries = urlParams.entries();
     for(const entry of entries) {
-        window.dataLayer.push(entry[0]: entry[1]);
+        window.dataLayer.push({entry[0]: entry[1]});
         }
     return null;
     }
