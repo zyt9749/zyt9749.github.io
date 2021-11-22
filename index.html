@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <title>Test page</title>
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <script src="static/js/jquery-3.2.1.min.js"></script>
       <script>
@@ -18,16 +18,25 @@
   </script>
       <script type="text/javascript">
 
-  $(function(){
+
 
     $("#testAPIbutton").click(function() {
+        /*
         $.get("http://httpbin.org/get", { name: "John", time: "2pm" }, function  (data) {
         alert(data);
-        });
-    }
+        });*/
+
+
+    $.ajax({
+    url: 'http://httpbin.org/get',
+    data:{foo:'bar'},
+    success: function (data) {
+            alert(data);
+        }
+    });
 });
 </script>
-      
+
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
