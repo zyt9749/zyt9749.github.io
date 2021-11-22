@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <title>Test page</title>
-
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <script src="static/js/jquery-3.2.1.min.js"></script>
       <script>
@@ -61,27 +61,17 @@
           height="90"
           src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
   </iframe>
-  <script>
-  var nameValue = {{Name}};
-  var emailValue = {{Email}};
 
-  function sendGetRequest(){
-
-    var url = 'http://httpbin.org/get?testa=111&testb=abc';
-    var request = new XMLHttpRequest();
-    request.open("GET", url,true);
-    //request.responseType = "document";
-    request.onload = function() {
-      //document.getElementById("myaaa").innerHTML=this.responseText;
-      window.dataLayer.push({'getResult': this.responseText});
-  }
-    request.send();
-
-  }
-
-  sendGetRequest();
-  </script>
   <button id='testAPIbutton' onclick="window.dataLayer.push({'event': 'button1-click'});">Click here to test API</button>
+
+  <script>
+  $("button").click(function(){
+      $.get("http://httpbin.org/get?testa=111&testb=abc", function(data, status){
+        alert("内容：" + data + "\n状态：" + status);
+      });
+    });
+</script>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5KQ7HT"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
