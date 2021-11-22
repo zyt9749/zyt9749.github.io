@@ -67,7 +67,7 @@
   <script>
   $("button").click(function(){
       $.get("http://httpbin.org/get?testa=111&testb=abc", function(data, status){
-        alert("内容：" + data + "\n状态：" + status);
+        window.alert("内容：" + data + "\n状态：" + status);
       });
     });
 </script>
