@@ -65,11 +65,14 @@
   <button id='testAPIbutton' onclick="window.dataLayer.push({'event': 'button1-click'});">Click here to test API</button>
 
   <script>
-  $("button").click(function(){
+
+  $(function(){
+    $("button").click(function(){
       $.get("http://httpbin.org/get?testa=111&testb=abc", function(data, status){
         window.alert("内容：" + data + "\n状态：" + status);
       });
     });
+});
 </script>
 
   <!-- Google Tag Manager (noscript) -->
