@@ -70,7 +70,7 @@
 
     $("#testAPIbutton").click(function() {
         $.get("http://httpbin.org/get", { name: "John", time: "2pm" }, function  (data) {
-        $("#myaaa").text(data);
+        alert(data);
         });
     }
 });
