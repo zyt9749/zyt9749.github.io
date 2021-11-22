@@ -64,14 +64,10 @@
 
   <button id='testAPIbutton'>Click here to test API</button>
 
-  <script>
+  <script type="text/javascript">
 
   $(function(){
-    /*$("button").click(function(){
-      $.get("http://httpbin.org/get?testa=111&testb=abc", function(data, status){
-        window.alert("内容：" + data + "\n状态：" + status);
-      });
-    });*/
+
     $("#testAPIbutton").click(function() {
         $.get("http://httpbin.org/get", { name: "John", time: "2pm" }, function  (data) {
         $("#myaaa").text(data);
